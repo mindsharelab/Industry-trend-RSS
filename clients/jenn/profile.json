@@ -1,49 +1,62 @@
 {
-  "name": "Jenn",
+  "name": "Jenn McCarron",
   "company": "Contracts.AI",
-  "product_description": "AI-powered contract management and review platform that helps legal teams work faster and reduce risk.",
+  "product_description": "AI-powered contract data infrastructure platform that transforms legal documents into searchable business data, enabling instant contract intelligence without manual tagging.",
   "expertise": [
-    "AI in contract review",
-    "Contract lifecycle management (CLM)",
-    "Legal operations efficiency",
-    "Legal tech adoption",
-    "In-house legal team workflows"
+    "Contract data infrastructure",
+    "Legal operations strategy",
+    "CLM implementation and optimization",
+    "AI in contract management",
+    "Enterprise legal tech transformation",
+    "Post-signature contract intelligence",
+    "Building contract tech stacks",
+    "Legal-to-finance workflow integration"
   ],
   "icp": {
     "titles": [
       "General Counsel",
-      "Legal Operations Manager",
       "VP of Legal",
-      "Head of Contracts",
-      "Associate General Counsel"
+      "Legal Operations Manager",
+      "Head of Legal Ops",
+      "Chief Legal Officer",
+      "Head of Procurement",
+      "Legal Tech Lead"
     ],
     "company_types": [
-      "Mid-market SaaS companies",
-      "Fast-growing startups with scaling legal needs",
-      "Enterprise companies modernizing legal ops"
+      "Fortune 500 companies",
+      "Mid-market to enterprise corporations",
+      "Companies with existing CLM investments",
+      "Organizations with large contract repositories",
+      "Private equity portfolio companies"
     ],
     "pain_points": [
-      "Contract review bottlenecks slowing deals",
-      "Manual contract processes that don't scale",
-      "Risk from inconsistent contract terms",
-      "Legal team overwhelmed by volume",
-      "Lack of visibility into contract obligations"
+      "CLM isn't delivering on search - lawyers can't find anything",
+      "Spent years and millions on CLM implementation with underwhelming results",
+      "Manual metadata tagging is killing productivity",
+      "Finance still can't get contract data they need",
+      "Repository is a void after signature",
+      "Six weeks to produce a clause report across 100k agreements",
+      "No visibility into contract obligations and pricing terms"
     ]
   },
   "content_themes": [
-    "How AI augments (not replaces) legal professionals",
-    "ROI of legal tech investments",
-    "Practical tips for legal ops efficiency",
-    "Future of in-house legal work",
-    "Change management in legal teams"
+    "Manual metadata tagging is over",
+    "CLMs excel at pre-signature but the repository is an afterthought",
+    "Contract data infrastructure is the next frontier (Legal Ops 3.0)",
+    "Point solutions beat one-stop-shops - do one thing really well",
+    "We potentiate the CLM, we don't replace it",
+    "The wow moment: contracts transformed to data in 2 minutes vs 2 years",
+    "Buyers have been conditioned to accept mediocrity in legal tech",
+    "The future of contracts is data, not documents"
   ],
   "voice": {
-    "tone": "Approachable expert - knowledgeable but not preachy, practical over theoretical",
+    "tone": "Confident, generous teacher who shares hard-won insights. Futurist who can 'draw' concepts others can't see. Direct and real - speaks from 15+ years of actually doing the work, not pontificating. Uses vivid analogies (kerplunk, stadium of data, Daft Punk robots exploding). Willing to say bold, contrarian things backed by experience.",
     "avoids": [
-      "Bashing competitors",
-      "Overpromising AI capabilities",
-      "Political topics",
-      "Highly technical implementation details"
+      "Bashing CLMs or competitors directly",
+      "Corporate speak and echo chamber LinkedIn fluff",
+      "Overpromising - hates vision-selling without substance",
+      "Operating system / one-stop-shop positioning",
+      "Future-facing pontification without practical takeaways"
     ]
   },
   "industry_terms": [
@@ -54,13 +67,34 @@
     "contract lifecycle management",
     "legal operations",
     "legal ops",
-    "AI legal",
-    "legal AI",
-    "contract review",
-    "contract automation",
+    "contract data",
+    "contract intelligence",
+    "contract repository",
+    "post-signature",
+    "metadata tagging",
+    "contract stack",
     "in-house legal",
     "general counsel",
-    "legal efficiency"
+    "legal AI",
+    "contract automation",
+    "vectorization",
+    "playbook",
+    "CLOC",
+    "enterprise legal"
+  ],
+  "key_differentiators": [
+    "Former buyer turned builder - implemented CLMs at Netflix, Cisco, etc.",
+    "15+ years hands-on legal ops experience",
+    "Technical depth - understands vectorization, LLMs, data infrastructure",
+    "Musician/producer background gives unique perspective on audience, presentation, creativity",
+    "Built something that took 2 years at Netflix in 2 minutes with AI"
+  ],
+  "sample_quotes": [
+    "Manual metadata tagging is over. It's over.",
+    "We potentiate the CLM. We send its value into the enterprise.",
+    "After the kerplunk... there's not a lot of intelligence. We light that up.",
+    "Do one thing and do it really well - Orville Redenbacher",
+    "They didn't know this was a problem. They thought this was just how things were."
   ],
   "sample_posts": []
 }
