@@ -10,11 +10,11 @@ Fetches trending content from multiple sources:
 Results are stored in a SQLite database for deduplication and scoring.
 """
 
-import feedparser
 import hashlib
 import json
 import re
 import sqlite3
+import xml.etree.ElementTree as ET
 from dataclasses import dataclass
 from datetime import datetime, timedelta
 from pathlib import Path
@@ -84,53 +84,82 @@ def hash_content(title: str, url: str) -> str:
     return hashlib.md5(f"{title}|{url}".encode()).hexdigest()
 
 
+def parse_rss_date(date_str: str) -> datetime | None:
+    """Parse common RSS date formats."""
+    if not date_str:
+        return None
+    formats = [
+        "%a, %d %b %Y %H:%M:%S %z",
+        "%a, %d %b %Y %H:%M:%S GMT",
+        "%Y-%m-%dT%H:%M:%S%z",
+        "%Y-%m-%d",
+    ]
+    for fmt in formats:
+        try:
+            return datetime.strptime(date_str.strip(), fmt)
+        except ValueError:
+            continue
+    return None
+
+
 def fetch_google_news(query: str, max_items: int = 20) -> list[TrendItem]:
-    """Fetch from Google News RSS."""
+    """Fetch from Google News RSS using simple XML parsing."""
     url = GOOGLE_NEWS_RSS.format(query=quote_plus(query))
-    feed = feedparser.parse(url)
+
+    try:
+        response = requests.get(url, timeout=15, headers={"User-Agent": "Mozilla/5.0"})
+        response.raise_for_status()
+        root = ET.fromstring(response.content)
+    except Exception as e:
+        print(f"Error fetching Google News for '{query}': {e}")
+        return []
 
     items = []
-    for entry in feed.entries[:max_items]:
-        published = None
-        if hasattr(entry, "published_parsed") and entry.published_parsed:
-            published = datetime(*entry.published_parsed[:6])
+    for item in root.findall(".//item")[:max_items]:
+        title = item.findtext("title", "")
+        link = item.findtext("link", "")
+        description = item.findtext("description", "")
+        pub_date = item.findtext("pubDate", "")
 
         items.append(TrendItem(
             source="google_news",
-            title=entry.get("title", ""),
-            url=entry.get("link", ""),
-            summary=entry.get("summary", ""),
-            published=published,
-            content_hash=hash_content(entry.get("title", ""), entry.get("link", ""))
+            title=title,
+            url=link,
+            summary=description[:500] if description else "",
+            published=parse_rss_date(pub_date),
+            content_hash=hash_content(title, link)
         ))
 
     return items
 
 
 def fetch_rss_feed(feed_url: str, source_name: str, max_items: int = 10) -> list[TrendItem]:
-    """Fetch from a generic RSS feed."""
+    """Fetch from a generic RSS feed using simple XML parsing."""
     try:
-        feed = feedparser.parse(feed_url)
-        items = []
-
-        for entry in feed.entries[:max_items]:
-            published = None
-            if hasattr(entry, "published_parsed") and entry.published_parsed:
-                published = datetime(*entry.published_parsed[:6])
-
-            items.append(TrendItem(
-                source=source_name,
-                title=entry.get("title", ""),
-                url=entry.get("link", ""),
-                summary=entry.get("summary", "")[:500] if entry.get("summary") else "",
-                published=published,
-                content_hash=hash_content(entry.get("title", ""), entry.get("link", ""))
-            ))
-
-        return items
+        response = requests.get(feed_url, timeout=15, headers={"User-Agent": "Mozilla/5.0"})
+        response.raise_for_status()
+        root = ET.fromstring(response.content)
     except Exception as e:
         print(f"Error fetching {feed_url}: {e}")
         return []
+
+    items = []
+    for item in root.findall(".//item")[:max_items]:
+        title = item.findtext("title", "")
+        link = item.findtext("link", "")
+        description = item.findtext("description", "")
+        pub_date = item.findtext("pubDate", "")
+
+        items.append(TrendItem(
+            source=source_name,
+            title=title,
+            url=link,
+            summary=description[:500] if description else "",
+            published=parse_rss_date(pub_date),
+            content_hash=hash_content(title, link)
+        ))
+
+    return items
 
 
 def store_trends(conn: sqlite3.Connection, items: list[TrendItem]) -> int:
