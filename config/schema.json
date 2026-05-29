@@ -1,0 +1,76 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Client Profile",
+  "description": "Profile used to score trend relevance for a client",
+  "type": "object",
+  "required": ["name", "company", "expertise", "icp", "content_themes"],
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Client's name"
+    },
+    "company": {
+      "type": "string",
+      "description": "Company name"
+    },
+    "product_description": {
+      "type": "string",
+      "description": "What the company/product does in 1-2 sentences"
+    },
+    "expertise": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Topics the client has deep expertise and credibility in"
+    },
+    "icp": {
+      "type": "object",
+      "description": "Ideal Customer Profile",
+      "properties": {
+        "titles": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Job titles of target audience (e.g., 'General Counsel', 'Legal Ops Manager')"
+        },
+        "company_types": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Types of companies they sell to (e.g., 'Mid-market SaaS', 'Enterprise')"
+        },
+        "pain_points": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Problems the ICP faces that the client solves"
+        }
+      }
+    },
+    "content_themes": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Recurring themes in their content (extracted from transcripts or questionnaire)"
+    },
+    "voice": {
+      "type": "object",
+      "properties": {
+        "tone": {
+          "type": "string",
+          "description": "How they come across (e.g., 'approachable expert', 'provocative thought leader')"
+        },
+        "avoids": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Topics or angles they avoid (competitors, politics, etc.)"
+        }
+      }
+    },
+    "industry_terms": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Industry jargon and related terms (for search hints, not strict filtering)"
+    },
+    "sample_posts": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Examples of past posts or content for style reference"
+    }
+  }
+}

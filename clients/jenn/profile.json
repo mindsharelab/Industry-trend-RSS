@@ -1,0 +1,66 @@
+{
+  "name": "Jenn",
+  "company": "Contracts.AI",
+  "product_description": "AI-powered contract management and review platform that helps legal teams work faster and reduce risk.",
+  "expertise": [
+    "AI in contract review",
+    "Contract lifecycle management (CLM)",
+    "Legal operations efficiency",
+    "Legal tech adoption",
+    "In-house legal team workflows"
+  ],
+  "icp": {
+    "titles": [
+      "General Counsel",
+      "Legal Operations Manager",
+      "VP of Legal",
+      "Head of Contracts",
+      "Associate General Counsel"
+    ],
+    "company_types": [
+      "Mid-market SaaS companies",
+      "Fast-growing startups with scaling legal needs",
+      "Enterprise companies modernizing legal ops"
+    ],
+    "pain_points": [
+      "Contract review bottlenecks slowing deals",
+      "Manual contract processes that don't scale",
+      "Risk from inconsistent contract terms",
+      "Legal team overwhelmed by volume",
+      "Lack of visibility into contract obligations"
+    ]
+  },
+  "content_themes": [
+    "How AI augments (not replaces) legal professionals",
+    "ROI of legal tech investments",
+    "Practical tips for legal ops efficiency",
+    "Future of in-house legal work",
+    "Change management in legal teams"
+  ],
+  "voice": {
+    "tone": "Approachable expert - knowledgeable but not preachy, practical over theoretical",
+    "avoids": [
+      "Bashing competitors",
+      "Overpromising AI capabilities",
+      "Political topics",
+      "Highly technical implementation details"
+    ]
+  },
+  "industry_terms": [
+    "legal tech",
+    "legal technology",
+    "contract management",
+    "CLM",
+    "contract lifecycle management",
+    "legal operations",
+    "legal ops",
+    "AI legal",
+    "legal AI",
+    "contract review",
+    "contract automation",
+    "in-house legal",
+    "general counsel",
+    "legal efficiency"
+  ],
+  "sample_posts": []
+}
