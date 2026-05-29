@@ -1,0 +1,72 @@
+{
+  "name": "Osman",
+  "company": "Mindshare Lab",
+  "product_description": "Helps early-stage B2B SaaS founders generate inbound and revenue through LinkedIn and founder-led marketing.",
+  "expertise": [
+    "Founder-led marketing",
+    "LinkedIn content strategy",
+    "B2B SaaS marketing",
+    "Personal brand for founders",
+    "Inbound lead generation",
+    "LinkedIn ads for B2B",
+    "Early-stage startup growth"
+  ],
+  "icp": {
+    "titles": [
+      "Founder",
+      "CEO",
+      "Co-founder",
+      "Head of Marketing",
+      "Solo founder"
+    ],
+    "company_types": [
+      "Early-stage B2B SaaS",
+      "Seed to Series A startups",
+      "Technical founders building their first company",
+      "Bootstrapped B2B companies"
+    ],
+    "pain_points": [
+      "No inbound pipeline - relying only on outbound",
+      "Struggling to stand out on LinkedIn",
+      "Don't know how to build personal brand as founder",
+      "Marketing feels inauthentic or salesy",
+      "Limited budget, need high-leverage channels",
+      "Founder is too busy to create content consistently"
+    ]
+  },
+  "content_themes": [
+    "Why founder-led marketing beats traditional B2B marketing",
+    "LinkedIn content that actually drives pipeline",
+    "Building authentic personal brand as a founder",
+    "Tactical LinkedIn growth strategies",
+    "The leverage of being the face of your company",
+    "Why early-stage founders should invest in content"
+  ],
+  "voice": {
+    "tone": "Dharmesh Shah-style - approachable, witty, uses data and stories, self-deprecating humor, genuine not polished, occasionally contrarian but backed by experience",
+    "avoids": [
+      "Corporate marketing speak",
+      "Overly salesy tactics",
+      "Generic growth hacks",
+      "Gatekeeping or elitism"
+    ]
+  },
+  "industry_terms": [
+    "founder-led marketing",
+    "founder led sales",
+    "B2B SaaS marketing",
+    "LinkedIn marketing",
+    "LinkedIn content",
+    "personal brand",
+    "founder brand",
+    "inbound marketing",
+    "B2B content",
+    "early-stage startup",
+    "seed stage marketing",
+    "LinkedIn ads",
+    "thought leadership",
+    "demand generation",
+    "content-led growth"
+  ],
+  "sample_posts": []
+}
