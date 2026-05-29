@@ -79,7 +79,7 @@ def generate_digest(client_name: str, min_score: int = 6) -> str:
 
     client = Anthropic()
     response = client.messages.create(
-        model="claude-3-haiku-20240307",
+        model="claude-sonnet-4-20250514",
         max_tokens=2000,
         messages=[{
             "role": "user",
